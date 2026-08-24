@@ -14,6 +14,7 @@ describe("provider error classification", () => {
       "Range of input length should be [1, 129024]",
       "Too many tokens",
       "Token limit exceeded",
+      "litellm.ContextWindowExceededError: litellm.BadRequestError: Context Window exceeded for given call. No models have context window large enough for this call.",
     ]
 
     expect(messages.every(isContextOverflow)).toBe(true)
